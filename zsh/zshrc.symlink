@@ -1,0 +1,5 @@
+# Load all the zsh files in the dotfiles.
+for module ($DOTFILES/**/*.zsh) source "$module"
+
+# Completion
+autoload compinit && compinit
