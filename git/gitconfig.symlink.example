@@ -9,11 +9,21 @@
 [credential]
         helper = GIT_CREDENTIAL_HELPER
 [alias]
-        co = checkout
-        promote = !$DOTFILES/bin/git-promote
-        wtf     = !$DOTFILES/bin/git-wtf
-        rank-contributers = !$DOTFILES/bin/git-rank-contributers
         count   = !git shortlog -sn
+        # Fancy logging, stolen from @garybernhardt/dotfiles
+        #   h = head
+        #   hp = head with patch
+        #   r = recent commits, only current branch
+        #   ra = recent commits, all reachable refs
+        #   l = all commits, only current branch
+        #   la = all commits, all reachable refs
+        head = !git l -1
+        h = !git head
+        hp = "!source ~/.githelpers && show_git_head"
+        r = !git l -30
+        ra = !git r --all
+        l = "!source ~/.githelpers && pretty_git_log"
+        la = !git l --all
 [color]
         diff = auto
         status = auto

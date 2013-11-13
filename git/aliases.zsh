@@ -3,7 +3,7 @@ if command -v hub &>/dev/null; then
 fi
 
 alias g=git
-alias gst='g status sb'
+alias gst='g status -sb'
 alias gp='g push'
 alias gpl='g pull'
 alias gfp='g fetch --all --prune'
