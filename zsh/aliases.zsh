@@ -32,6 +32,9 @@ alias _='sudo'
 # Update and edit dotfiles.
 alias reload!='. ~/.zshrc'
 
+# Lists files containing 'TODO' to remind me of things still left to do!
+alias todo="ag 'TODO'"
+
 # Usage: httpserver [<port>]
 httpserver() {
   python -m SimpleHTTPServer "$@"
