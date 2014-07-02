@@ -70,3 +70,6 @@ set-window-option -g window-status-current-fg black
 # Pane border and colors.
 set-option -g pane-active-border-fg colour33
 set-option -g pane-border-fg white
+
+# Open new windows with the current directory.
+bind c new-window -c "#{pane_current_path}"
