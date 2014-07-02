@@ -21,4 +21,4 @@ alias gb='g branch'
 alias gl='g l'
 alias gl5='gl -5'
 alias glo='g log --oneline'
-
+alias grb='g rebase'
