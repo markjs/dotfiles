@@ -71,8 +71,8 @@ bind-key / command-prompt "split-window 'exec man %%'"
 bind-key S command-prompt "new-window -n %1 'ssh %1'"
 
 # Style the status bar.
-set-option -g status-bg black
-set-option -g status-fg white
+set-option -g status-bg white
+set-option -g status-fg black
 set-option -g status-left-length 30
 set -g status-right "#(battery -o tmux)#[fg=default] %e %B %R"
 set-window-option -g window-status-current-bg colour33
