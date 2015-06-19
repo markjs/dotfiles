@@ -32,7 +32,7 @@ set-option -g history-limit 5000
 
 # More intuitive window splitting.
 unbind-key %
-bind-key | split-window -h
+bind-key \ split-window -h
 bind-key - split-window -v
 
 # Don't wait after pressing escape.
