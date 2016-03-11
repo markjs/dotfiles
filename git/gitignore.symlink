@@ -3,3 +3,5 @@
 *~
 *.swp
 .sass-cache/
+zeus.json
+custom_plan.rb
