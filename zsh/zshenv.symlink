@@ -8,6 +8,10 @@ if [ -d "$DOTFILES/bin" ]; then
   path=($DOTFILES/bin $path)
 fi
 
+if [ -d "$HOME/sites/bin" ]; then
+  path=($HOME/sites/bin $PATH)
+fi
+
 # Set the default manpath.
 manpath=(/usr/share/man /usr/local/share/man)
 
