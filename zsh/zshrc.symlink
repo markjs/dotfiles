@@ -3,3 +3,5 @@ for module ($DOTFILES/**/*.zsh) source "$module"
 
 # Completion
 autoload compinit && compinit
+
+eval "$(rbenv init -)"
