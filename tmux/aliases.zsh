@@ -11,3 +11,5 @@ function tswap() {
     fi
   fi
 }
+
+alias mux='tmuxinator'
