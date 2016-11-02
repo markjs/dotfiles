@@ -13,7 +13,7 @@ then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
   echo "  Updating Homebrew..."
-  brew update
+  brew update > /tmp/brew-update.log
 fi
 
 if ! brew ls --versions grc > /dev/null; then
@@ -27,6 +27,5 @@ if ! brew ls --versions coreutils > /dev/null; then
 fi
 
 echo "  Running other installers in dotfiles..."
-cd "$(dirname $)"/..
 # find the installers and run them iteratively
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
