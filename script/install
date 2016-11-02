@@ -4,9 +4,29 @@
 
 set -e
 
+echo "  Setting macOS values..."
+$DOTFILES/osx/set-defaults.sh
+
+if test ! $(which brew)
+then
+  echo "  Installing Homebrew..."
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+  echo "  Updating Homebrew..."
+  brew update
+fi
+
+if ! brew ls --versions grc > /dev/null; then
+  echo "  Installing grc..."
+  brew install grc
+fi
+
+if ! brew ls --versions coreutils > /dev/null; then
+  echo "  Installing coreutils..."
+  brew install coreutils
+fi
+
+echo "  Running other installers in dotfiles..."
 cd "$(dirname $)"/..
-
-dot
-
 # find the installers and run them iteratively
 find . -name install.sh | while read installer ; do sh -c "${installer}" ; done

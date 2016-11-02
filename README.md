@@ -21,3 +21,15 @@ https://github.com/settings/keys
 ```
 git clone git@github.com:markjs/dotfiles ~/.dotfiles
 ```
+
+```
+cd ~/.dotfiles && script/bootstrap
+```
+
+```
+chsh -s $(which zsh)
+```
+
+```
+script/install
+```
