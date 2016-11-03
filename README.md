@@ -1,7 +1,7 @@
 # markjs/dotfiles
 
 ```
-ssh-keygen -t rsa -b 4096 -C "mark@markjs.net"
+ssh-keygen -t rsa -b 4096 -C "EMAIL"
 ```
 
 ```
@@ -27,9 +27,9 @@ cd ~/.dotfiles && script/bootstrap
 ```
 
 ```
-chsh -s $(which zsh)
+script/install
 ```
 
 ```
-script/install
+chsh -s $(which zsh)
 ```
