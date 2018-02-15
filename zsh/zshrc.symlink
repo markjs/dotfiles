@@ -8,3 +8,8 @@ if test $(which rbenv)
 then
   eval "$(rbenv init -)"
 fi
+
+if test $(which direnv)
+then
+  eval "$(direnv hook zsh)"
+fi

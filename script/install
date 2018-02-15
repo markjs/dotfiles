@@ -5,7 +5,7 @@
 set -e
 
 echo "  Setting macOS values..."
-$DOTFILES/osx/set-defaults.sh
+osx/set-defaults.sh
 
 if test ! $(which brew)
 then
